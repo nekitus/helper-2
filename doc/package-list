@@ -1,6 +1,6 @@
-org.helepr
-org.helepr.utils
-org.helepr.view
+org.helper
+org.helper.utils
+org.helper.view
 org.java_websocket
 org.java_websocket.client
 org.java_websocket.drafts

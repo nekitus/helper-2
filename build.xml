@@ -8,8 +8,7 @@
 
 	<target name="compile">
 		<mkdir dir="build/classes" />
-		<mkdir dir="build/examples" />
-		<javac includeantruntime="false" debug="on" classpathref="myclasspath" srcdir="src/main/java"
+		<javac includeantruntime="false" debug="on" classpathref="myclasspath" srcdir="src/"
 			destdir="build/classes" target="1.5" />
 
 	</target>
@@ -18,6 +17,10 @@
 		<jar destfile="dist/java_websocket.jar">
             <zipgroupfileset includes="*.jar" dir="lib"/>
 			<fileset dir="build/classes" includes="**/*.class" />
+            <manifest>
+                <!--<attribute name="Main-Class" value="org.helper.App"/>-->
+                <attribute name="Main-Class" value="org.helper.SSHUploader"/>
+            </manifest>
 		</jar>
 	</target>
 
